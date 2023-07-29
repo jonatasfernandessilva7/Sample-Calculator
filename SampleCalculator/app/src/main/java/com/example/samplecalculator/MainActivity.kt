@@ -1,5 +1,6 @@
 package com.example.samplecalculator
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -7,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var resposta : EditText;
-    private lateinit var numeroUm : EditText;
-    private lateinit var numeroDois : EditText;
+    private lateinit var resposta : EditText
+    private lateinit var numeroUm : EditText
+    private lateinit var numeroDois : EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,36 +21,49 @@ class MainActivity : AppCompatActivity() {
         numeroDois = findViewById(R.id.numeroDois)
     }
 
+    fun imprimirResposta(valorResposta: Double){
+        resposta.setText((valorResposta).toString())
+    }
+
     fun somar(view: View?) {
-        val valorUm = numeroUm.text.toString().toInt()
-        val valorDois = numeroDois.text.toString().toInt()
-        resposta.setText((valorUm + valorDois).toString())
+        val valorUm = numeroUm.text.toString().toDouble()
+        val valorDois = numeroDois.text.toString().toDouble()
+        var valorResposta: Double = valorUm + valorDois
+        imprimirResposta(valorResposta)
     }
 
     fun dividir(view: View?) {
-        val valorUm = numeroUm.text.toString().toInt()
-        val valorDois = numeroDois.text.toString().toInt()
-        resposta.setText((valorUm / valorDois).toString())
+        val valorUm = numeroUm.text.toString().toDouble()
+        val valorDois = numeroDois.text.toString().toDouble()
+        var valorResposta: Double = valorUm / valorDois
+        imprimirResposta(valorResposta)
     }
 
     fun multiplicar(view: View?) {
-        val valorUm = numeroUm.text.toString().toInt()
-        val valorDois = numeroDois.text.toString().toInt()
-        resposta.setText((valorUm * valorDois).toString())
+        val valorUm = numeroUm.text.toString().toDouble()
+        val valorDois = numeroDois.text.toString().toDouble()
+        var valorResposta: Double = valorUm * valorDois
+        imprimirResposta(valorResposta)
     }
 
     fun subtrair(view: View?) {
-        val valorUm = numeroUm.text.toString().toInt()
-        val valorDois = numeroDois.text.toString().toInt()
-        resposta.setText((valorUm - valorDois).toString())
+        val valorUm = numeroUm.text.toString().toDouble()
+        val valorDois = numeroDois.text.toString().toDouble()
+        var valorResposta: Double = valorUm - valorDois
+        imprimirResposta(valorResposta)
     }
 
 
     fun porcentagem(view: View?) {
-        val valorUm = numeroUm.text.toString().toInt()
-        val valorDois = numeroDois.text.toString().toInt()
-        resposta.setText(((valorUm / valorDois)*1).toString())
+        val valorUm = numeroUm.text.toString().toDouble()
+        val valorDois = numeroDois.text.toString().toDouble()
+        var valorResposta: Double = (valorUm/100)*valorDois
+        imprimirResposta(valorResposta)
     }
 
+    fun abrirTelaSobre(view: View){
+        var telaSobre = Intent(this, TelaSobre::class.java)
+        startActivity(telaSobre)
+    }
 
 }
