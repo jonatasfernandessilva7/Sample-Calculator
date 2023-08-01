@@ -26,37 +26,37 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun somar(view: View?) {
-        val valorUm = numeroUm.text.toString().toDouble()
-        val valorDois = numeroDois.text.toString().toDouble()
+        var valorUm = numeroUm.text.toString().toDouble()
+        var valorDois = numeroDois.text.toString().toDouble()
         var valorResposta: Double = valorUm + valorDois
         imprimirResposta(valorResposta)
     }
 
     fun dividir(view: View?) {
-        val valorUm = numeroUm.text.toString().toDouble()
-        val valorDois = numeroDois.text.toString().toDouble()
+        var valorUm = numeroUm.text.toString().toDouble()
+        var valorDois = numeroDois.text.toString().toDouble()
         var valorResposta: Double = valorUm / valorDois
         imprimirResposta(valorResposta)
     }
 
     fun multiplicar(view: View?) {
-        val valorUm = numeroUm.text.toString().toDouble()
-        val valorDois = numeroDois.text.toString().toDouble()
+        var valorUm = numeroUm.text.toString().toDouble()
+        var valorDois = numeroDois.text.toString().toDouble()
         var valorResposta: Double = valorUm * valorDois
         imprimirResposta(valorResposta)
     }
 
     fun subtrair(view: View?) {
-        val valorUm = numeroUm.text.toString().toDouble()
-        val valorDois = numeroDois.text.toString().toDouble()
+        var valorUm = numeroUm.text.toString().toDouble()
+        var valorDois = numeroDois.text.toString().toDouble()
         var valorResposta: Double = valorUm - valorDois
         imprimirResposta(valorResposta)
     }
 
 
     fun porcentagem(view: View?) {
-        val valorUm = numeroUm.text.toString().toDouble()
-        val valorDois = numeroDois.text.toString().toDouble()
+        var valorUm = numeroUm.text.toString().toDouble()
+        var valorDois = numeroDois.text.toString().toDouble()
         var valorResposta: Double = (valorUm/100)*valorDois
         imprimirResposta(valorResposta)
     }
