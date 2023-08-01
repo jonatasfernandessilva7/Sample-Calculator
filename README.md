@@ -1,2 +1,2 @@
 # SampleCalculator
-essa é uma calculadora simples, para avaliar meus conhecimentos em kotlin, utilizando Java como base
+essa é uma calculadora simples, colocando em prática meus aprendizados em desenvolvimento android
