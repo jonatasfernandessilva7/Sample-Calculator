@@ -11,8 +11,8 @@ class TelaSobre : AppCompatActivity() {
         setContentView(R.layout.activity_tela_sobre)
     }
 
-    fun voltarTelaInicial(view: View){
-        var telaInicial = Intent(this, MainActivity::class.java)
-        startActivity(telaInicial)
+    fun abrirTelaDeDiversao(view: View){
+        var telaDeDiversao = Intent(this, TelaDeDiversao::class.java)
+        startActivity(telaDeDiversao)
     }
 }

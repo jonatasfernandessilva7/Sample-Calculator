@@ -8,7 +8,8 @@
     <string name="porcentagem"> % </string>
     <string name="numeroUm"> 0 </string>
     <string name="numeroDois"> 0 </string>
-    <string name="nome" > Jonatas </string>
+    <string name="nome"> Este é um aplicativo feito para cálculos simples </string>
     <string name="sobre"> Info </string>
-    <string name="voltar"> voltar </string>
+    <string name="irATelaDiversao"> Diversão </string>
+    <string name="imagem_animada">Imagem animada</string>
 </resources>
